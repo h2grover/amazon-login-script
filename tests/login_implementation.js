@@ -22,7 +22,7 @@ step("Open the amazon account of <user>", async function(user){
 
   await amazonLogin.open();
 
-  await amazonLogin.setUsername("9654081639")
+  await amazonLogin.setUsername(user)
   await amazonLogin.clickToContinue()
   
   await amazonLogin.setPassword(process.env.SECRET_KEY)
