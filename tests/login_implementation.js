@@ -28,7 +28,6 @@ step("Open the amazon account of <user>", async function(user){
   await amazonLogin.setPassword(process.env.SECRET_KEY)
   await amazonLogin.clickToSignIn()
   
-  assert.ok(user.length === 10)
   await amazonLogin.takeScreenShot();
   assert.ok(await amazonLogin.areUrlEqual())
 
