@@ -5,14 +5,10 @@ module.exports = class TestBase {
     this.browser = ""
   }
   async createPage(){
-    const browser = await puppeteer.launch();
-    this.browser = browser
-    const page = await browser.newPage();
-    return page
+    this.browser = await puppeteer.launch();     
+    return await this.browser.newPage();
   }  
   async cleanup(){
     await this.browser.close();
   }
 }
-
-// module.exports.TestBase = TestBase

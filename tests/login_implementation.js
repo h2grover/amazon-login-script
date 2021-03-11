@@ -3,9 +3,6 @@
 var assert = require("assert");
 const dotenv = require('dotenv');
 
-// import AmazonLoginPage from '../pages/AmazonLoginPage'
-// import TestBase from "./TestBase"
-
 const TestBase = require("./TestBase")
 const AmazonLoginPage = require("../pages/AmazonLoginPage")
 
